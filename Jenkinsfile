@@ -29,12 +29,5 @@ pipeline {
                 '''
             }
         }
-        stage('Check Cluster') {
-            steps {
-                sh '''
-                ansible master -m shell -a "kubectl --kubeconfig=/etc/kubernetes/admin.conf get nodes"
-                '''
-            }
-        }
     }
 }
