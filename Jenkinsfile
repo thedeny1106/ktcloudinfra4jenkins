@@ -1,9 +1,9 @@
 pipeline {
-  agent env
-  stagets {
-    staget('git_scm_update') {
-      steps{
-        git url: "https://github.com/thedeny1106/ktcloudinfra4jenkins.git", branch: "main"
+  agent any
+  stages {
+    stage('git scm update') {
+      steps {
+        git url: 'https://github.com/thedeny1106/ktcloudinfrajenkins.git', branch: 'main'
       }
     }
     stage('delivery and deployment using k8s') {
