@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: nginx
+        image: thedeny1106/ktcloudinfra4:0727 
         ports:
         - containerPort: 80
 ---
