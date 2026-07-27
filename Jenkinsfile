@@ -4,7 +4,7 @@ pipeline {
         stage('Git SCM Update') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/thedeny1106/ktcloudinfra4jenkins.git'
+                    url: 'https://github.com/thedeny1106/ktcloudinfra4jenkins.git', branch: 'main'
             }
         }
         stage('Build & Push Docker Image') {
